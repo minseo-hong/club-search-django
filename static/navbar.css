@@ -1,0 +1,30 @@
+.navbar {
+    color: #DFE6CB;
+}
+
+.navbar-brand {
+    color: #DFE6CB;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar-collapse {
+        background-image: url('./header-image.png');
+        background-size: cover;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        margin-top: 20px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+}
+
+.nav-link {
+    color: #DFE6CB !important;
+}
+
+.nav-link:hover {
+    color: #DFE6CB !important;
+}
+
+.nav-link.active {
+    color: #C3AE6B !important;
+}

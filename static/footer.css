@@ -1,0 +1,17 @@
+.footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 20px;
+    background-color: #DFE6CB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .footer-copyright {
+    font-weight: 200;
+}
+
+.footer .footer-host {
+    font-weight: 200;
+}
