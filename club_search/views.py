@@ -59,8 +59,6 @@ def club_list_all(request):
 
     searched_clubs = Club.objects.filter(name__contains=search)
 
-    print(searched_clubs)
-
     context = {
         "header_title": "검색",
         "navbar_active": "홈",
