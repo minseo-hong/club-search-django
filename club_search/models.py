@@ -11,6 +11,10 @@ class Club(models.Model):
     manager = models.CharField(null=True, blank=True, max_length=50)
     manager_call = models.CharField(null=True, blank=True, max_length=50)
     introduction = models.TextField(null=True, blank=True)
+    recruit_period = models.CharField(null=True, blank=True, max_length=50)
+    recruit_number = models.CharField(null=True, blank=True, max_length=50)
+    recruit_way = models.CharField(null=True, blank=True, max_length=50)
+    activity_period = models.CharField(null=True, blank=True, max_length=50)
 
     def __str__(self):
         return self.name

@@ -39,28 +39,44 @@
                 <i class="bi bi-calendar-date"></i>
                 <div class="recruit-info-detail">
                     <h6>모집시기</h6>
-                    <p>매학기</p>
+                    {% if club.recruit_period %}
+                    <p>{{ club.recruit_period }}</p>
+                    {% else %}
+                    <p>미결</p>
+                    {% endif %}
                 </div>
             </div>
             <div class="recruit-info-item">
                 <i class="bi bi-people"></i>
                 <div class="recruit-info-detail">
                     <h6>모집인원</h6>
-                    <p>00명</p>
+                    {% if club.recruit_number %}
+                    <p>{{ club.recruit_number }}</p>
+                    {% else %}
+                    <p>미결</p>
+                    {% endif %}
                 </div>
             </div>
             <div class="recruit-info-item">
                 <i class="bi bi-pencil"></i>
                 <div class="recruit-info-detail">
                     <h6>모집방식</h6>
-                    <p>면접</p>
+                    {% if club.recruit_way %}
+                    <p>{{ club.recruit_way }}</p>
+                    {% else %}
+                    <p>미결</p>
+                    {% endif %}
                 </div>
             </div>
             <div class="recruit-info-item">
                 <i class="bi bi-watch"></i>
                 <div class="recruit-info-detail">
                     <h6>활동기간</h6>
-                    <p>한학기</p>
+                    {% if club.activity_period %}
+                    <p>{{ club.activity_period }}</p>
+                    {% else %}
+                    <p>미결</p>
+                    {% endif %}
                 </div>
             </div>
         </div>
