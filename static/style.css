@@ -25,6 +25,18 @@ body {
     font-weight: 200;
 }
 
+@media screen and (max-width: 768px) {
+    .intro p {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .intro p {
+        font-size: 25px;
+    }
+}
+
 .intro span {
     font-weight: 400;
 }

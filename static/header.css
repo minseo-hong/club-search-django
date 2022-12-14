@@ -27,6 +27,16 @@
     font-weight: 400;
 }
 
+@media screen and (max-width: 576px) {
+    .small-header-title {
+        font-size: 30px;
+    }
+
+    .big-header-title {
+        font-size: 45px;
+    }
+}
+
 .header-search {
     display: flex;
     justify-content: center;
