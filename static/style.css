@@ -91,6 +91,49 @@ body {
 	}
 }
 
+.club-info .club-logo {
+    object-fit: cover;
+}
+
+.recruit-info-wrapper {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.recruit-info {
+    grid-column: 3 / span 8;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .recruit-info {
+        grid-column: 2 / span 10;
+    }
+}
+
 .recruit-info .recruit-info-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #DFE6CB;
+    border-radius: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.recruit-info-item i {
+    font-size: 35px;
+}
+
+.recruit-info-detail h6 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.recruit-info-detail p {
+    margin-bottom: 0px;
 }
