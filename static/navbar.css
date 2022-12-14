@@ -2,6 +2,11 @@
     color: #DFE6CB;
 }
 
+.scrolled {
+    background-image: url('./header-image.png');
+    background-size: cover;
+}
+
 .navbar-brand {
     color: #DFE6CB;
 }
