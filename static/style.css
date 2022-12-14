@@ -71,6 +71,7 @@ body {
 .club-item img {
 	width: 100%;
 	height: auto;
+	border-radius: 25px;
 	margin-bottom: 20px;
 }
 
