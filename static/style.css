@@ -26,12 +26,20 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .landing {
+        padding-top: 60px;
+    }
+
     .intro p {
         font-size: 30px;
     }
 }
 
 @media screen and (max-width: 576px) {
+    .landing {
+        padding-top: 50px;
+    }
+
     .intro p {
         font-size: 25px;
     }
@@ -63,7 +71,6 @@ body {
 .club-item img {
 	width: 100%;
 	height: auto;
-	border-radius: 25px;
 	margin-bottom: 20px;
 }
 
