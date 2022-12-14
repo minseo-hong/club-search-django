@@ -10,8 +10,8 @@
 <div class="container-fluid pt-5">
     <div class="club-info-wrapper">
         <div class="club-info">
-            {% if club.logo %}
             <div class="club-logo">
+                {% if club.logo %}
                 <img class="club-logo-img" src="{{ club.logo.url }}" alt="{{ club.name }}">
                 {% else %}
                 <img class="club-logo-img" src="/static/default-logo.jpg" alt="{{ club.name }}">
