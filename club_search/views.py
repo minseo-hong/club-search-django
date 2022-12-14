@@ -27,8 +27,12 @@ def club_list(request, club_department):
     search = request.GET.get('search', None)
     sort = request.GET.get('sort', None)
 
-    if search or sort:
+    if search and sort:
         clubs = Club.objects.filter(department=club_department, name__contains=search, sort=sort)
+    elif search and not sort:
+        clubs = Club.objects.filter(department=club_department, name__contains=search)
+    elif not search and sort:
+        clubs = Club.objects.filter(department=club_department, sort=sort)
     else:
         clubs = Club.objects.filter(department=club_department)
 
