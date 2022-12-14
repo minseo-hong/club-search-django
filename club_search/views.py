@@ -25,9 +25,10 @@ def club_list(request, club_department):
         club_department = "사범대학"
 
     search = request.GET.get('search', None)
+    sort = request.GET.get('sort', None)
 
-    if search:
-        clubs = Club.objects.filter(department=club_department, name__contains=search)
+    if search or sort:
+        clubs = Club.objects.filter(department=club_department, name__contains=search, sort=sort)
     else:
         clubs = Club.objects.filter(department=club_department)
 
@@ -35,6 +36,7 @@ def club_list(request, club_department):
         "header_title": club_department,
         "navbar_active": club_department,
         "club_list": clubs,
+        "dropdown_selected": sort,
     }
 
     return render(request, 'club_search/club_list.html', context)

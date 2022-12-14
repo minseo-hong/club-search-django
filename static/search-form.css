@@ -1,4 +1,18 @@
 .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.dropdown {
+    padding: 5px 10px;
+    border: 1px solid rgba(6, 13, 16, 0.5);
+    border-radius: 8px;
+}
+
+.search {
     position: relative;
     display: flex;
     align-items: center;
@@ -24,7 +38,7 @@
     width: 300px;
 }
 
-.header-content .search-form {
+.header-content .search {
     margin: auto;
     width: 400px;
 }
@@ -33,20 +47,19 @@
     width: 400px;
 }
 
-.club-section .search-form {
+.club-section .search {
     width: 300px;
     margin-left: auto;
-    margin-top: 15px;
 }
 
 @media screen and (max-width: 992px) {
-    .club-section .search-form {
+    .club-section .search {
         width: 250px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .club-section .search-form {
+    .club-section .search {
         width: 200px;
     }
 }
