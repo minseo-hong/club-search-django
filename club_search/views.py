@@ -14,21 +14,21 @@ def index(request):
 
 def club_list(request, club_department):
     if club_department == "com_edu":
-        club_department_raw = "컴퓨터교육과"
+        club_department = "컴퓨터교육과"
     elif club_department == "edu":
-        club_department_raw = "교육학과"
+        club_department = "교육학과"
     elif club_department == "math_edu":
-        club_department_raw = "수학교육과"
+        club_department = "수학교육과"
     elif club_department == "han_edu":
-        club_department_raw = "한문교육과"
+        club_department = "한문교육과"
     else:
-        club_department_raw = "사범대학"
+        club_department = "사범대학"
 
-    clubs = Club.objects.filter(department=club_department_raw)
+    clubs = Club.objects.filter(department=club_department)
 
     context = {
-        "header_title": club_department_raw,
-        "navbar_active": club_department_raw,
+        "header_title": club_department,
+        "navbar_active": club_department,
         "club_list": clubs,
     }
 
