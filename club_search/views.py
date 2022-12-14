@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from club_search.models import Club
 
@@ -12,72 +12,30 @@ def index(request):
     return render(request, 'club_search/index.html', context)
 
 
-def edu_group(request):
-    club_list = Club.objects.filter(department="사범대학")
-    club_list = club_list.order_by('name')
+def club_list(request, club_department):
+    if club_department == "com_edu":
+        club_department_raw = "컴퓨터교육과"
+    elif club_department == "edu":
+        club_department_raw = "교육학과"
+    elif club_department == "math_edu":
+        club_department_raw = "수학교육과"
+    elif club_department == "han_edu":
+        club_department_raw = "한문교육과"
+    else:
+        club_department_raw = "사범대학"
+
+    clubs = Club.objects.filter(department=club_department_raw)
 
     context = {
-        "header_title": "사범대학",
-        "navbar_active": "사범대학",
-        "club_list": club_list,
+        "header_title": club_department_raw,
+        "navbar_active": club_department_raw,
+        "club_list": clubs,
     }
 
     return render(request, 'club_search/club_list.html', context)
 
 
-def com_edu(request):
-    club_list = Club.objects.filter(department="컴퓨터교육과")
-    club_list = club_list.order_by('name')
-
-    context = {
-        "header_title": "컴퓨터교육과",
-        "navbar_active": "컴퓨터교육과",
-        "club_list": club_list,
-    }
-
-    return render(request, 'club_search/club_list.html', context)
-
-
-def edu(request):
-    club_list = Club.objects.filter(department="교육학과")
-    club_list = club_list.order_by('name')
-
-    context = {
-        "header_title": "교육학과",
-        "navbar_active": "교육학과",
-        "club_list": club_list,
-    }
-
-    return render(request, 'club_search/club_list.html', context)
-
-
-def han_edu(request):
-    club_list = Club.objects.filter(department="한문교육과")
-    club_list = club_list.order_by('name')
-
-    context = {
-        "header_title": "한문교육과",
-        "navbar_active": "한문교육과",
-        "club_list": club_list,
-    }
-
-    return render(request, 'club_search/club_list.html', context)
-
-
-def math_edu(request):
-    club_list = Club.objects.filter(department="수학교육과")
-    club_list = club_list.order_by('name')
-
-    context = {
-        "header_title": "수학교육과",
-        "navbar_active": "수학교육과",
-        "club_list": club_list,
-    }
-
-    return render(request, 'club_search/club_list.html', context)
-
-
-def detail(request, club_id):
+def club_detail(request, club_id):
     club = Club.objects.get(id=club_id)
 
     context = {
