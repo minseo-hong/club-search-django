@@ -8,15 +8,15 @@
     </div>
 </div>
 <div class="container-fluid">
-    <form class="search-form" action="{% url 'club_search:club_list_all' %}" method="GET">
-        <i class="search-icon bi bi-search"></i>
-        <input class="search-input" type="text" name="search" placeholder="검색" autocomplete="off" />
-    </form>
-    <div class="d-flex justify-content-center">
-        <div class="col-12 col-md-10 club-list">
+    <div class="club-section col-12 col-md-10">
+        <form class="search-form" method="GET">
+            <i class="search-icon bi bi-search"></i>
+            <input class="search-input" type="text" name="search" placeholder="검색" autocomplete="off" />
+        </form>
+        <div class="club-list">
             {% if club_list %}
             {% for club in club_list %}
-            <div class="club-item" onclick="location.href='{% url 'club_search:detail' club.id %}'">
+            <div class="club-item" onclick="location.href='{% url 'club_search:club_detail' club.id %}'">
                 {% if club.logo %}
                 <img src="{{ club.logo.url }}" alt="{{ club.name }}">
                 {% else %}

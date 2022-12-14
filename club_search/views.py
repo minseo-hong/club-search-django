@@ -24,7 +24,12 @@ def club_list(request, club_department):
     else:
         club_department = "사범대학"
 
-    clubs = Club.objects.filter(department=club_department)
+    search = request.GET.get('search', None)
+
+    if search:
+        clubs = Club.objects.filter(department=club_department, name__contains=search)
+    else:
+        clubs = Club.objects.filter(department=club_department)
 
     context = {
         "header_title": club_department,

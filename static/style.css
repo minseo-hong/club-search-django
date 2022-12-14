@@ -53,12 +53,16 @@ body {
     color: #389583;
 }
 
+.club-section {
+    margin: auto;
+}
+
 .club-list {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-auto-rows: auto;
 	grid-gap: 20px;
-	padding: 50px 30px;
+	padding: 30px 30px;
 }
 
 .club-item {
