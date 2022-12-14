@@ -37,3 +37,13 @@
         font-size: 45px;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .small-header-title {
+        font-size: 30px;
+    }
+
+    .big-header-title {
+        font-size: 35px;
+    }
+}
