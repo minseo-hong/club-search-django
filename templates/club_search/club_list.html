@@ -8,6 +8,10 @@
     </div>
 </div>
 <div class="container-fluid">
+    <form class="search-form" action="{% url 'club_search:club_list_all' %}" method="GET">
+        <i class="search-icon bi bi-search"></i>
+        <input class="search-input" type="text" name="search" placeholder="검색" autocomplete="off" />
+    </form>
     <div class="d-flex justify-content-center">
         <div class="col-12 col-md-10 club-list">
             {% if club_list %}

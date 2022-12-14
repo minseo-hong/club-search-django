@@ -45,3 +45,19 @@ def club_detail(request, club_id):
     }
 
     return render(request, 'club_search/club_detail.html', context)
+
+
+def club_list_all(request):
+    search = request.GET.get('search', '')
+
+    searched_clubs = Club.objects.filter(name__contains=search)
+
+    print(searched_clubs)
+
+    context = {
+        "header_title": "검색",
+        "navbar_active": "홈",
+        "club_list": searched_clubs,
+    }
+
+    return render(request, 'club_search/club_list.html', context)
