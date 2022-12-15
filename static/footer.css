@@ -13,6 +13,9 @@
 }
 
 .footer .footer-host {
-    font-weight: 200;
     text-align: right;
+}
+
+.footer-host span {
+    font-weight: 200;
 }
